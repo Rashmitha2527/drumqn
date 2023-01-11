@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    background-color: #676767;
+    display: block;
+    margin: 8px;
+
+}
+div {
+    display: block;
+}
+h1 {
+    font-size: 5rem;
+    color: #DBEDF3;
+    text-shadow: 3px 0 #da0463;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main {
+    margin: 10% auto;
+}
+.drum {
+    outline: none;
+    border: 10px solid #696c77;
+    font-size: 5rem;
+    line-height: 2;
+    font-weight: 500;
+    color: #e44f92;
+    text-shadow: 3px 0 #707b7e;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+}
+.w {
+    background-image: url(crash.png);
+}
+.a {
+    background-image: url(tom2.png);
+}
+.s {
+    background-image: url(tom3.png);
+}
+.d {
+    background-image: url(tom1.png);
+}
+.j {
+    background-image: url(snare.png);
+}
+.k {
+    background-image: url(tom4.png);
+}
+.l {
+    background-image: url(kick.png);
+}

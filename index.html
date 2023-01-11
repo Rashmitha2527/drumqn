@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drum kit</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1 id="title">Drum 🥁 Kit</h1>
+    <div class="main">
+    <button class="w drum">W</button>
+    <button class="a drum">A</button>
+    <button class="s drum">S</button>
+    <button class="d drum">D</button>
+    <button class="j drum">J</button>
+    <button class="k drum">K</button>
+    <button class="l drum">L</button>
+  </div>
+  <script>
+    let buttonsClick = document.querySelectorAll(".drum");
+for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
+    buttonsClick[i].addEventListener("click", function () {
+       let buttonInnerHTML = this.innerHTML;
+         makeSound(buttonInnerHTML);
+
+       buttonAnimation(buttonInnerHTML);
+    });
+};
+document.addEventListener("keydown", function(event){
+    makeSound(event.key);
+
+    buttonAnimation(event.key);
+});
+function makeSound(key){
+        if (key=='W') {
+                  let snare = new Audio("snare.mp3");
+                  snare.play();
+                   }
+                 else if (key=='A') {
+                  let buzz = new Audio("buzz.mp3");
+                  buzz.play();
+                 }
+                 else if (key=='S') {
+                  let pin = new Audio("pin.mp3");
+                  pin.play();
+                 }
+                 else if (key=='D') {
+                  let buzzer = new Audio("buzzer.mp3");
+                  buzzer.play();
+                 }
+                 else if (key=='J') {
+                  let crash = new Audio("kick-bass.mp3");
+                  crash.play();
+                 }
+                 else if (key=='K') {
+                  let crock = new Audio("crock.mp3");
+                  crock.play();
+                 }
+                 else if (key=='L') {
+                  let kick = new Audio("crash.mp3");
+                  kick.play();
+                 }
+        
+}
+function buttonAnimation(currentKey){
+    let activeButton = document.querySelector("." + currentKey);
+
+   activeButton.classList.add("pressed");
+
+    setTimeout(function(){
+       activeButton.classList.remove("pressed");
+    }, 100);
+}
+  </script>
+  </body>
+</html>
